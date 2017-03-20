@@ -4,3 +4,9 @@ k:\ProjektyC#\10_Pdf_test\PdfParsingiTextSharp\bin\Debug\itextsharp.dll
 k:\ProjektyC#\10_Pdf_test\PdfParsingiTextSharp\obj\x86\Debug\PdfParsingiTextSharp.csprojResolveAssemblyReference.cache
 k:\ProjektyC#\10_Pdf_test\PdfParsingiTextSharp\obj\x86\Debug\PdfParsingiTextSharp.exe
 k:\ProjektyC#\10_Pdf_test\PdfParsingiTextSharp\obj\x86\Debug\PdfParsingiTextSharp.pdb
+k:\ProjektyC#\13_Pdf_test_1\PdfParsingiTextSharp\obj\x86\Debug\PdfParsingiTextSharp.exe
+k:\ProjektyC#\13_Pdf_test_1\PdfParsingiTextSharp\obj\x86\Debug\PdfParsingiTextSharp.pdb
+k:\ProjektyC#\13_Pdf_test_1\PdfParsingiTextSharp\obj\x86\Debug\PdfParsingiTextSharp.csprojResolveAssemblyReference.cache
+k:\ProjektyC#\13_Pdf_test_1\PdfParsingiTextSharp\bin\Debug\PdfParsingiTextSharp.exe
+k:\ProjektyC#\13_Pdf_test_1\PdfParsingiTextSharp\bin\Debug\PdfParsingiTextSharp.pdb
+k:\ProjektyC#\13_Pdf_test_1\PdfParsingiTextSharp\bin\Debug\itextsharp.dll
