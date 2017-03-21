@@ -155,6 +155,18 @@ namespace PdfParsingiTextSharp
 		/// <returns></returns>
 		public static string ExtractTextFromPDFBytes(byte[] input)
 		{
+/*
+			string temp_str = "";
+			char znak;
+
+			for (int i = 0; i < input.Length; i++)
+			{
+				znak = (char)input[i];
+				temp_str += znak;
+			}
+*/
+
+
 			if (input == null || input.Length == 0) return "";
 
 			try
