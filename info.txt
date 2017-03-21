@@ -1,4 +1,14 @@
 
+
+
+toutoriale
+
+http://blog.rubypdf.com/itextsharp/tutorial01/index.html
+sciagnac to jakims managerem pobierania 
+
+
 ze strony
+
+
 
 http://www.squarepdf.net/parsing-pdf-files-using-itextsharp

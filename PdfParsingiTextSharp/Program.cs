@@ -34,9 +34,13 @@ namespace PdfParsingiTextSharp
 			string tekst = "";
 			// Kamil from StackOverflow
 
-			ExtractText("Spiewnik KFC.pdf", "output.txt");
 
-			// Console.WriteLine(ExtractTextFromPdf("Spiewnik KFC.pdf"));
+			// OP 1
+			Console.WriteLine(ExtractTextFromPdf("Spiewnik KFC.pdf"));
+
+
+			// OP 2
+			// ExtractText("Spiewnik KFC.pdf", "output.txt");
 		}
 
 
@@ -48,7 +52,11 @@ namespace PdfParsingiTextSharp
 
                 for (int i = 1; i <= reader.NumberOfPages; i++)
                 {
-                    text.Append(PdfTextExtractor.GetTextFromPage(reader, i));
+					string temp_str = "";
+
+					temp_str = PdfTextExtractor.GetTextFromPage(reader, i);
+
+					text.Append(temp_str);
                 }
 
 
@@ -98,7 +106,11 @@ namespace PdfParsingiTextSharp
 
 				for (int page = 1; page <= reader.NumberOfPages; page++)
 				{
-					outFile.Write(ExtractTextFromPDFBytes(reader.GetPageContent(page)) + " ");
+					string temp_str;
+					
+					temp_str = ExtractTextFromPDFBytes(reader.GetPageContent(page));
+
+					outFile.Write(temp_str + " ");
 
 					// Write the progress.
 					if (charUnit >= 1.0f)
@@ -167,7 +179,8 @@ namespace PdfParsingiTextSharp
 */
 
 
-			if (input == null || input.Length == 0) return "";
+			if (input == null || input.Length == 0)
+				return "";
 
 			try
 			{
@@ -185,7 +198,9 @@ namespace PdfParsingiTextSharp
 
 				// Keep previous chars to get extract numbers etc.:
 				char[] previousCharacters = new char[_numberOfCharsToKeep];
-				for (int j = 0; j < _numberOfCharsToKeep; j++) previousCharacters[j] = ' ';
+
+				for (int j = 0; j < _numberOfCharsToKeep; j++)
+					previousCharacters[j] = ' ';
 
 
 				for (int i = 0; i < input.Length; i++)
