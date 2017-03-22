@@ -1,0 +1,365 @@
+<html>
+
+<!-- Mirrored from blog.rubypdf.com/itextsharp/tutorial01/ap03Chap0301.cs.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Mar 2017 08:12:29 GMT -->
+<head>
+<link rel="stylesheet" type="text/css" href="sdcss.css">
+<title>Chap0301.cs</title>
+<Script LANGUAGE='JavaScript'>  
+													if(self!=top){top.location=self.location;}  
+													</script></head>
+<body><div align=center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7558339387099421";
+google_ad_width = 336;
+google_ad_height = 280;
+google_ad_format = "336x280_as";
+google_ad_type = "text";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000.html";
+
+//--></script>
+<script type="text/javascript" src="../../../pagead2.googlesyndication.com/pagead/f.txt"></script>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7558339387099421";
+google_ad_width = 336;
+google_ad_height = 280;
+google_ad_format = "336x280_as";
+google_ad_type = "text";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000.html";
+
+//--></script>
+<script type="text/javascript" src="../../../pagead2.googlesyndication.com/pagead/f.txt"></script>
+</div>
+													<a href='http://hardrock.cnblogs.com/' target='_blank'><h3>Blog</h3></a>
+													<!--<a href='http://aspspider.net/tonyfox/pdf/' target='_blank'><h3>iTextSharp Demo(asp.net 2.0)</h3></a>-->
+													
+<div class="code"><TABLE SUMMARY="SourceCode" BORDER=0 CELLSPACING=0 CELLPADDING=2 WIDTH="100%">
+  <TR BGCOLOR="#FFFFFF">
+    <TH WIDTH="50" NOWRAP ALIGN=LEFT></TH>
+    <TH WIDTH="1%" NOWRAP ALIGN=LEFT></TH>
+    <TH VALIGN=TOP ALIGN=LEFT>&nbsp; 
+    </TH>
+  </TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>1:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span1">using&nbsp;</span><span class="span2">System</span><span class="span3">;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>2:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span1">using&nbsp;</span><span class="span2">System</span><span class="span3">.</span><span class="span2">IO</span><span class="span3">;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>3:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+</TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>4:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span1">using&nbsp;</span><span class="span2">iTextSharp</span><span class="span3">.</span><span class="span2">text</span><span class="span3">;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>5:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span1">using&nbsp;</span><span class="span2">iTextSharp</span><span class="span3">.</span><span class="span2">text</span><span class="span3">.</span><span class="span2">pdf</span><span class="span3">;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>6:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+</TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>7:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span1">namespace&nbsp;</span><span class="span2">iTextSharp</span><span class="span3">.</span><span class="span2">tutorial</span><span class="span3">.</span><span class="span2">Chap03</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>8:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">{</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>9:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="span4">///&nbsp;&lt;</span><span class="span5">summary</span><span class="span4">&gt;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>10:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="span4">///&nbsp;</span><span class="span6">Anchors:external&nbsp;link&nbsp;and&nbsp;internal&nbsp;link&nbsp;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>11:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="span4">///&nbsp;&lt;</span><span class="span5">/summary</span><span class="span4">&gt;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>12:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="span7">public&nbsp;</span><span class="span8">class&nbsp;</span><span class="span2">Chap0301</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>13:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="span3">{</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>14:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span7">public&nbsp;</span><span class="span10">Chap0301</span><span class="span3">()</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>15:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span3">{</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>16:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">Console</span><span class="span3">.</span><span class="span10">WriteLine</span><span class="span3">(</span><span class="span12">"Chapter&nbsp;3&nbsp;example&nbsp;1:&nbsp;Anchors"</span><span class="span3">);</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>17:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>18:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span6">//&nbsp;step&nbsp;1:&nbsp;creation&nbsp;of&nbsp;a&nbsp;document-object</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>19:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">Document&nbsp;document&nbsp;</span><span class="span3">=&nbsp;</span><span class="span11">new&nbsp;</span><span class="span10">Document</span><span class="span3">();</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>20:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>21:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span16">try&nbsp;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>22:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span3">{</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>23:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>24:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span6">//&nbsp;step&nbsp;2:</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>25:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span6">//&nbsp;we&nbsp;create&nbsp;a&nbsp;writer&nbsp;that&nbsp;listens&nbsp;to&nbsp;the&nbsp;document</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>26:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span6">//&nbsp;and&nbsp;directs&nbsp;a&nbsp;PDF-stream&nbsp;to&nbsp;a&nbsp;file</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>27:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">PdfWriter</span><span class="span3">.</span><span class="span10">GetInstance</span><span class="span3">(</span><span class="span2">document</span><span class="span3">,&nbsp;</span><span class="span11">new&nbsp;</span><span class="span10">FileStream</span><span class="span3">(</span><span class="span12">"Chap0301.pdf"</span><span class="span3">,&nbsp;</span><span class="span2">FileMode</span><span class="span3">.</span><span class="span2">Create</span><span class="span3">));</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>28:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>29:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span6">//&nbsp;step&nbsp;3:&nbsp;we&nbsp;Open&nbsp;the&nbsp;document</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>30:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">document</span><span class="span3">.</span><span class="span10">Open</span><span class="span3">();</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>31:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>32:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span6">//&nbsp;step&nbsp;4:</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>33:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">Paragraph&nbsp;paragraph&nbsp;</span><span class="span3">=&nbsp;</span><span class="span11">new&nbsp;</span><span class="span10">Paragraph</span><span class="span3">(</span><span class="span12">"Please&nbsp;visit&nbsp;my&nbsp;"</span><span class="span3">);</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>34:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">Anchor&nbsp;anchor1&nbsp;</span><span class="span3">=&nbsp;</span><span class="span11">new&nbsp;</span><span class="span10">Anchor</span><span class="span3">(</span><span class="span12">"website&nbsp;(external&nbsp;reference)"</span><span class="span3">,&nbsp;</span><span class="span2">FontFactory</span><span class="span3">.</span><span class="span10">GetFont</span><span class="span3">(</span><span class="span2">FontFactory</span><span class="span3">.</span><span class="span2">HELVETICA</span><span class="span3">,&nbsp;</span><span class="span17">12</span><span class="span3">,&nbsp;</span><span class="span2">Font</span><span class="span3">.</span><span class="span2">UNDERLINE</span><span class="span3">,&nbsp;</span><span class="span11">new&nbsp;</span><span class="span10">Color</span><span class="span3">(</span><span class="span17">0</span><span class="span3">,&nbsp;</span><span class="span17">0</span><span class="span3">,&nbsp;</span><span class="span17">255</span><span class="span3">)));</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>35:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">anchor1</span><span class="span3">.</span><span class="span2">Reference&nbsp;</span><span class="span3">=&nbsp;</span><span class="span12">"http://itextsharp.sourceforge.net"</span><span class="span3">;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>36:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">anchor1</span><span class="span3">.</span><span class="span2">Name&nbsp;</span><span class="span3">=&nbsp;</span><span class="span12">"top"</span><span class="span3">;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>37:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">paragraph</span><span class="span3">.</span><span class="span10">Add</span><span class="span3">(</span><span class="span2">anchor1</span><span class="span3">);</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>38:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">paragraph</span><span class="span3">.</span><span class="span10">Add</span><span class="span3">(</span><span class="span11">new&nbsp;</span><span class="span10">Chunk</span><span class="span3">(</span><span class="span12">".\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"</span><span class="span3">));</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>39:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">document</span><span class="span3">.</span><span class="span10">Add</span><span class="span3">(</span><span class="span2">paragraph</span><span class="span3">);</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>40:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">Anchor&nbsp;anchor2&nbsp;</span><span class="span3">=&nbsp;</span><span class="span11">new&nbsp;</span><span class="span10">Anchor</span><span class="span3">(</span><span class="span12">"please&nbsp;jump&nbsp;to&nbsp;a&nbsp;local&nbsp;destination"</span><span class="span3">,&nbsp;</span><span class="span2">FontFactory</span><span class="span3">.</span><span class="span10">GetFont</span><span class="span3">(</span><span class="span2">FontFactory</span><span class="span3">.</span><span class="span2">HELVETICA</span><span class="span3">,&nbsp;</span><span class="span17">12</span><span class="span3">,&nbsp;</span><span class="span2">Font</span><span class="span3">.</span><span class="span2">NORMAL</span><span class="span3">,&nbsp;</span><span class="span11">new&nbsp;</span><span class="span10">Color</span><span class="span3">(</span><span class="span17">0</span><span class="span3">,&nbsp;</span><span class="span17">0</span><span class="span3">,&nbsp;</span><span class="span17">255</span><span class="span3">)));</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>41:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">anchor2</span><span class="span3">.</span><span class="span2">Reference&nbsp;</span><span class="span3">=&nbsp;</span><span class="span12">"#top"</span><span class="span3">;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>42:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">document</span><span class="span3">.</span><span class="span10">Add</span><span class="span3">(</span><span class="span2">anchor2</span><span class="span3">);</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>43:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span3">}</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>44:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span16">catch</span><span class="span3">(</span><span class="span2">DocumentException&nbsp;de</span><span class="span3">)&nbsp;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>45:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span3">{</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>46:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">Console</span><span class="span3">.</span><span class="span2">Error</span><span class="span3">.</span><span class="span10">WriteLine</span><span class="span3">(</span><span class="span2">de</span><span class="span3">.</span><span class="span2">Message</span><span class="span3">);</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>47:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span3">}</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>48:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span16">catch</span><span class="span3">(</span><span class="span2">IOException&nbsp;ioe</span><span class="span3">)&nbsp;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>49:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span3">{</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>50:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">Console</span><span class="span3">.</span><span class="span2">Error</span><span class="span3">.</span><span class="span10">WriteLine</span><span class="span3">(</span><span class="span2">ioe</span><span class="span3">.</span><span class="span2">Message</span><span class="span3">);</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>51:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span3">}</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>52:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>53:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span6">//&nbsp;step&nbsp;5:&nbsp;we&nbsp;close&nbsp;the&nbsp;document</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>54:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span2">document</span><span class="span3">.</span><span class="span10">Close</span><span class="span3">();</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>55:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+</TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>56:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="span3">}</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>57:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="span3">}</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>58:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">}</span></TD>
+</TR>
+</TABLE></div>
+<P>
+<script type='text/javascript'><!--
+											google_ad_client = 'pub-7558339387099421';
+											google_ad_width = 728;
+											google_ad_height = 90;
+											google_ad_format = '728x90_as';
+											google_ad_type = 'text_image';
+											google_ad_channel ='';
+											google_page_url = document.location;
+											google_color_border = '009999';
+											google_color_bg = 'FFFFFF';
+											google_color_link = '006666';
+											google_color_url = '669966.html';
+											google_color_text = '669966';
+											//--></script>
+											<script type='text/javascript'
+											src='../../../pagead2.googlesyndication.com/pagead/f.txt'>
+											</script> 
+
+</p>
+</body>
+
+<!-- Mirrored from blog.rubypdf.com/itextsharp/tutorial01/ap03Chap0301.cs.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Mar 2017 08:12:29 GMT -->
+</html>
+

@@ -36,15 +36,65 @@ namespace PdfParsingiTextSharp
 
 
 			// OP 1
-			Console.WriteLine(ExtractTextFromPdf("Spiewnik KFC.pdf"));
+			Console.WriteLine(ExtractTextFromPdf("Spiewnik KFC.pdf"));				// sa znaki konca linii, taby tez sa, ale nieuzyteczne - w zasadzie OK, problem tylko z wyswietleniem potem tego - ale moze byc OK
 
 
 			// OP 2
-			// ExtractText("Spiewnik KFC.pdf", "output.txt");
+			// ExtractText("Spiewnik KFC.pdf", "output.txt");						// tu sa jakies krzaki, nie rozumiem tego
+
+
+			// OP 3
+			// KamilFunct("Spiewnik KFC.pdf");										// to wogole nie dziala
+
 		}
 
+		// Zima nie dziala to
+		public static void KamilFunct(string path)
+		{
+			PRStream stream;
+			string content;
+			PdfDictionary page;
+			PdfArray contentArray;
+			string watermarkText = "";
 
-        public static string ExtractTextFromPdf(string path)
+			PdfReader reader = new PdfReader(path);
+
+			int pageCount2 = reader.NumberOfPages;
+
+			for (int i = 1; i <= pageCount2; i++)
+			{
+				// Get the page
+				page = reader.GetPageN(i);
+
+				// Get the raw content
+				contentArray = page.GetAsArray(PdfName.CONTENTS);
+
+				if (contentArray != null)
+				{
+					// Loop through content
+					for (int j = 0; j < contentArray.Size; j++)
+					{
+						stream = (PRStream)contentArray.GetAsStream(j);
+
+						// Convert to a String, NOTE: you might need a different encoding here
+						content = System.Text.Encoding.ASCII.GetString(PdfReader.GetStreamBytes(stream));
+
+						//Look for the OCG token in the stream as well as our watermarked text
+						if (content.IndexOf("/OC") >= 0 && content.IndexOf(watermarkText) >= 0)
+						{
+							//Remove it by giving it zero length and zero data
+							stream.Put(PdfName.LENGTH, new PdfNumber(0));
+							stream.SetData(new byte[0]);
+						}
+					}
+				}
+			}
+
+
+		}   // KamilFunct
+
+
+		public static string ExtractTextFromPdf(string path)
         {
             using (PdfReader reader = new PdfReader(path))
             {
@@ -55,6 +105,9 @@ namespace PdfParsingiTextSharp
 					string temp_str = "";
 
 					temp_str = PdfTextExtractor.GetTextFromPage(reader, i);
+
+					if (i == 22)
+						;
 
 					text.Append(temp_str);
                 }

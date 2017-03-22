@@ -1,0 +1,365 @@
+<html>
+
+<!-- Mirrored from blog.rubypdf.com/itextsharp/tutorial01/semblyInfo.cs.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Mar 2017 08:11:48 GMT -->
+<head>
+<link rel="stylesheet" type="text/css" href="sdcss.css">
+<title>AssemblyInfo.cs</title>
+<Script LANGUAGE='JavaScript'>  
+													if(self!=top){top.location=self.location;}  
+													</script></head>
+<body><div align=center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7558339387099421";
+google_ad_width = 336;
+google_ad_height = 280;
+google_ad_format = "336x280_as";
+google_ad_type = "text";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000.html";
+
+//--></script>
+<script type="text/javascript" src="../../../pagead2.googlesyndication.com/pagead/f.txt"></script>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7558339387099421";
+google_ad_width = 336;
+google_ad_height = 280;
+google_ad_format = "336x280_as";
+google_ad_type = "text";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000.html";
+
+//--></script>
+<script type="text/javascript" src="../../../pagead2.googlesyndication.com/pagead/f.txt"></script>
+</div>
+													<a href='http://hardrock.cnblogs.com/' target='_blank'><h3>Blog</h3></a>
+													<!--<a href='http://aspspider.net/tonyfox/pdf/' target='_blank'><h3>iTextSharp Demo(asp.net 2.0)</h3></a>-->
+													
+<div class="code"><TABLE SUMMARY="SourceCode" BORDER=0 CELLSPACING=0 CELLPADDING=2 WIDTH="100%">
+  <TR BGCOLOR="#FFFFFF">
+    <TH WIDTH="50" NOWRAP ALIGN=LEFT></TH>
+    <TH WIDTH="1%" NOWRAP ALIGN=LEFT></TH>
+    <TH VALIGN=TOP ALIGN=LEFT>&nbsp; 
+    </TH>
+  </TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>1:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span1">using&nbsp;</span><span class="span2">System</span><span class="span3">.</span><span class="span2">Reflection</span><span class="span3">;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>2:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span1">using&nbsp;</span><span class="span2">System</span><span class="span3">.</span><span class="span2">Runtime</span><span class="span3">.</span><span class="span2">CompilerServices</span><span class="span3">;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>3:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+</TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>4:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>5:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;йس򼯵ĳϢͨ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>6:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;ԼƵġЩֵ޸</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>7:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;Ϣ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>8:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>9:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">[</span><span class="span2">assembly:&nbsp;</span><span class="span10">AssemblyTitle</span><span class="span3">(</span><span class="span12">""</span><span class="span3">)]</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>10:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">[</span><span class="span2">assembly:&nbsp;</span><span class="span10">AssemblyDescription</span><span class="span3">(</span><span class="span12">""</span><span class="span3">)]</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>11:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">[</span><span class="span2">assembly:&nbsp;</span><span class="span10">AssemblyConfiguration</span><span class="span3">(</span><span class="span12">""</span><span class="span3">)]</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>12:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">[</span><span class="span2">assembly:&nbsp;</span><span class="span10">AssemblyCompany</span><span class="span3">(</span><span class="span12">""</span><span class="span3">)]</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>13:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">[</span><span class="span2">assembly:&nbsp;</span><span class="span10">AssemblyProduct</span><span class="span3">(</span><span class="span12">""</span><span class="span3">)]</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>14:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">[</span><span class="span2">assembly:&nbsp;</span><span class="span10">AssemblyCopyright</span><span class="span3">(</span><span class="span12">""</span><span class="span3">)]</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>15:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">[</span><span class="span2">assembly:&nbsp;</span><span class="span10">AssemblyTrademark</span><span class="span3">(</span><span class="span12">""</span><span class="span3">)]</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>16:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">[</span><span class="span2">assembly:&nbsp;</span><span class="span10">AssemblyCulture</span><span class="span3">(</span><span class="span12">""</span><span class="span3">)]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>17:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+</TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>18:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>19:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;򼯵İ汾Ϣ&nbsp;4&nbsp;ֵ:</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>20:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>21:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;汾</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>22:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ΰ汾&nbsp;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>23:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ڲ汾</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>24:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;޶</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>25:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>26:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;ָЩֵҲʹá޶š͡ڲ汾šĬֵǰ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>27:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;ʾʹ&nbsp;'*':</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>28:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+</TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>29:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">[</span><span class="span2">assembly:&nbsp;</span><span class="span10">AssemblyVersion</span><span class="span3">(</span><span class="span12">"1.0.*"</span><span class="span3">)]</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>30:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+</TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>31:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>32:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;ҪԳ򼯽ǩָҪʹõԿйسǩĸϢο&nbsp;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>33:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;Microsoft&nbsp;.NET&nbsp;Framework&nbsp;ĵ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>34:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>35:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;ʹԿǩԿ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>36:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>37:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;ע:</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>38:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;(*)&nbsp;δָԿ򼯲ᱻǩ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>39:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;(*)&nbsp;KeyName&nbsp;ָѾװڼϵ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>40:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ܷṩ(CSP)еԿKeyFile&nbsp;ָ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>41:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Կļ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>42:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;(*)&nbsp;&nbsp;KeyFile&nbsp;&nbsp;KeyName&nbsp;ֵָ&nbsp;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>43:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;д:</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>44:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)&nbsp;&nbsp;CSP&nbsp;пҵ&nbsp;KeyNameʹøԿ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>45:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)&nbsp;&nbsp;KeyName&nbsp;ڶ&nbsp;KeyFile&nbsp;ڣ&nbsp;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>46:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KeyFile&nbsp;еԿװ&nbsp;CSP&nbsp;вʹøԿ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>47:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;(*)&nbsp;Ҫ&nbsp;KeyFileʹ&nbsp;sn.exe(ǿ)ʵùߡ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>48:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ָ&nbsp;KeyFile&nbsp;ʱKeyFile&nbsp;λӦ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>49:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ĿĿ¼</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>50:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%Project&nbsp;Directory%\obj\&lt;configuration&gt;磬&nbsp;KeyFile&nbsp;λ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>51:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ĿĿ¼Ӧ&nbsp;AssemblyKeyFile&nbsp;</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>52:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ָΪ&nbsp;[assembly:&nbsp;AssemblyKeyFile("..\\..\\mykey.snk")]</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>53:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;(*)&nbsp;ӳǩһ߼ѡ&nbsp;-&nbsp;йĸϢ&nbsp;Microsoft&nbsp;.NET&nbsp;Framework</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>54:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ĵ</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>55:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span6">//</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>56:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">[</span><span class="span2">assembly:&nbsp;</span><span class="span10">AssemblyDelaySign</span><span class="span3">(</span><span class="span11">false</span><span class="span3">)]</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>57:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">[</span><span class="span2">assembly:&nbsp;</span><span class="span10">AssemblyKeyFile</span><span class="span3">(</span><span class="span12">""</span><span class="span3">)]</span></TD>
+</TR>
+  <TR BGCOLOR="#FFFFFF" VALIGN=TOP>
+    <TD NOWRAP VALIGN=TOP ALIGN=RIGHT>58:</TD>
+    <TD NOWRAP VALIGN=TOP ALIGN=LEFT>&nbsp;
+<span class="span3">[</span><span class="span2">assembly:&nbsp;</span><span class="span10">AssemblyKeyName</span><span class="span3">(</span><span class="span12">""</span><span class="span3">)]</span></TD>
+</TR>
+</TABLE></div>
+<P>
+<script type='text/javascript'><!--
+											google_ad_client = 'pub-7558339387099421';
+											google_ad_width = 728;
+											google_ad_height = 90;
+											google_ad_format = '728x90_as';
+											google_ad_type = 'text_image';
+											google_ad_channel ='';
+											google_page_url = document.location;
+											google_color_border = '009999';
+											google_color_bg = 'FFFFFF';
+											google_color_link = '006666';
+											google_color_url = '669966.html';
+											google_color_text = '669966';
+											//--></script>
+											<script type='text/javascript'
+											src='../../../pagead2.googlesyndication.com/pagead/f.txt'>
+											</script> 
+
+</p>
+</body>
+
+<!-- Mirrored from blog.rubypdf.com/itextsharp/tutorial01/semblyInfo.cs.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Mar 2017 08:11:48 GMT -->
+</html>
+

@@ -1,0 +1,109 @@
+div.code
+{
+	background-color: rgb(255,255,255);
+	font-family: "Lucida Console", "courier new", courier;
+	color: rgb(0,0,0);
+	font-size: x-small;
+	padding: 1em;
+	margin: 1em;
+}
+div.code span.span10
+{
+	color: rgb(25, 25, 112);
+	font-weight: bold;
+}
+div.code span.span8
+{
+	color: rgb(255, 0, 0);
+	font-weight: normal;
+}
+div.code span.span17
+{
+	color: rgb(0, 0, 139);
+	font-weight: normal;
+}
+div.code span.span14
+{
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+}
+div.code span.span7
+{
+	color: rgb(0, 0, 255);
+	font-weight: bold;
+}
+div.code span.span18
+{
+	color: rgb(255, 0, 0);
+	font-weight: bold;
+}
+div.code span.span19
+{
+	color: rgb(139, 69, 19);
+	font-weight: normal;
+}
+div.code span.span16
+{
+	color: rgb(0, 128, 128);
+	font-weight: bold;
+}
+div.code span.span3
+{
+	color: rgb(0, 100, 0);
+	font-weight: normal;
+}
+div.code span.span2
+{
+	color: rgb(0, 0, 0);
+	font-weight: normal;
+}
+div.code span.span9
+{
+	color: rgb(165, 42, 42);
+	font-weight: normal;
+}
+div.code span.span15
+{
+	color: rgb(0, 0, 128);
+	font-weight: normal;
+}
+div.code span.span4
+{
+	color: rgb(128, 128, 128);
+	font-weight: normal;
+}
+div.code span.span13
+{
+	color: rgb(255, 0, 255);
+	font-weight: normal;
+}
+div.code span.span20
+{
+	color: rgb(192, 192, 192);
+	font-weight: bold;
+}
+div.code span.span11
+{
+	color: rgb(0, 139, 139);
+	font-weight: bold;
+}
+div.code span.span5
+{
+	color: rgb(128, 128, 128);
+	font-weight: bold;
+}
+div.code span.span12
+{
+	color: rgb(0, 0, 255);
+	font-weight: normal;
+}
+div.code span.span1
+{
+	color: rgb(0, 128, 0);
+	font-weight: bold;
+}
+div.code span.span6
+{
+	color: rgb(0, 128, 0);
+	font-weight: normal;
+}
